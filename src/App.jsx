@@ -1,6 +1,23 @@
-const App = () => {
+import { Container, Typography } from "@mui/material";
+
+const App = () =>
+{
   return (
-    <div>APP CLIMA</div>
+    <Container
+      maxWidth='xs'
+      sx={ { mt: 2 } }
+    >
+      <Typography
+        variant='h3'
+        component='h1'
+        align="center"
+        gutterBottom
+      >
+        Weather App
+
+      </Typography>
+
+    </Container>
   )
 }
 
