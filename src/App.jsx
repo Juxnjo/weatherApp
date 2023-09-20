@@ -1,7 +1,13 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Container, TextField, Typography } from "@mui/material";
 
 const App = () =>
 {
+
+  const onSubmit = e => {
+    e.preventDefault();
+    console.log('ok')
+  }
+
   return (
     <Container
       maxWidth='xs'
@@ -16,7 +22,22 @@ const App = () =>
         Weather App
 
       </Typography>
+      <Box
+        sx={{display: 'grid', gap: 2}}
+        component='form'
+        autoComplete="off"
+        onSubmit={onSubmit}
+      >
+        <TextField
+          id="city"
+          label="Ciudad"
+          variant="outlined"
+          size="small"
+          required
+          fullWidth
+        />
 
+      </Box>
     </Container>
   )
 }
