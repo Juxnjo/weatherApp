@@ -1,7 +1,9 @@
 import { LoadingButton } from "@mui/lab";
 import { Box, Container, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import  API_WEATHER  from "./api/api.js";
+import API_WEATHER from "./api/api.js";
+import { Head } from "./components/Head.jsx";
+import { Copyright } from "./components/Copyright.jsx";
 
 
 const App = () =>
@@ -68,15 +70,8 @@ const App = () =>
       maxWidth='xs'
       sx={ { mt: 2 } }
     >
-      <Typography
-        variant='h3'
-        component='h1'
-        align="center"
-        gutterBottom
-      >
-        Weather App
+      <Head />
 
-      </Typography>
       <Box
         sx={ { display: 'grid', gap: 2 } }
         component='form'
@@ -135,19 +130,8 @@ const App = () =>
       ) }
 
 
+      <Copyright />
 
-      <Typography
-        textAlign="center"
-        sx={ { mt: 2, fontSize: "10px" } }
-      >
-        Powered by:{ " " }
-        <a
-          href="https://www.weatherapi.com/"
-          title="Weather API"
-        >
-          WeatherAPI.com
-        </a>
-      </Typography>
     </Container>
   )
 }
