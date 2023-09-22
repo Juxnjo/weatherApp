@@ -8,7 +8,7 @@ const App = () =>
 
 
   return (
-    <Container
+    <Container className=""
       maxWidth='xs'
       sx={ { mt: 2 } }
     >
